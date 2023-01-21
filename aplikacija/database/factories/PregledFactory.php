@@ -23,7 +23,7 @@ class PregledFactory extends Factory
         return [
             'ljubimac' => $this->faker->numberBetween($min = 1, $max = Ljubimac::count()),
             'veterinar' =>$this->faker->numberBetween($min = 1, $max = Veterinar::count()),
-            'datum' => $this->faker->randomElement($array = array ('labrador','retriver','bison','maltezer')),
+            'datum' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'cena' =>$this->faker->numberBetween($min = 1000, $max = 15000),
            
         ];
