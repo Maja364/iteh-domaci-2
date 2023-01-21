@@ -11,6 +11,8 @@ class Veterinar extends Model
     protected $fillable = [
         'ime',
         'prezime',
+        'iskustvo',
+
          
     ];
 

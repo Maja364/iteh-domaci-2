@@ -14,7 +14,10 @@ class VeterinarFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'ime' => $this->faker->firstName(),
+            'prezime' =>$this->faker->lastName(),
+            'iskustvo' => $this->faker->randomElement($array = array ('praktikant','junior','medior','senior')),
+           
         ];
     }
 }

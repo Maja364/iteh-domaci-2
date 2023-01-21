@@ -14,7 +14,11 @@ class LjubimacFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'ime' => $this->faker->firstName(),
+            'ime_vlasnika' =>$this->faker->firstName(),
+            'rasa' => $this->faker->randomElement($array = array ('labrador','retriver','bison','maltezer')),
+            'godine' =>$this->faker->numberBetween($min = 1, $max = 15),
+           
         ];
     }
 }
