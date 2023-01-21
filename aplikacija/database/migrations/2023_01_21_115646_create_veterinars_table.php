@@ -15,6 +15,9 @@ class CreateVeterinarsTable extends Migration
     {
         Schema::create('veterinars', function (Blueprint $table) {
             $table->id();
+            $table->string('ime');
+            $table->string('prezime');
+
             $table->timestamps();
         });
     }

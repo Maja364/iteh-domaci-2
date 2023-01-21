@@ -15,6 +15,11 @@ class CreatePregledsTable extends Migration
     {
         Schema::create('pregleds', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('ljubimac');
+            $table->foreignId('veterinar');
+            $table->string('datum');
+            $table->integer('cena');
+
             $table->timestamps();
         });
     }

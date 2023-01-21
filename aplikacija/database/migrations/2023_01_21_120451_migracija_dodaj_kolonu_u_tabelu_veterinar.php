@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLjubimacsTable extends Migration
+class MigracijaDodajKolonuUTabeluVeterinar extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateLjubimacsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ljubimacs', function (Blueprint $table) {
-            $table->id();
-            $table->string('ime');
-            $table->string('ime_vlasnika');
-            $table->string('rasa');
-            $table->integer('godine');
+        Schema::table('veterinars', function (Blueprint $table) {
+           
+            $table->string('iskustvo');
 
-            $table->timestamps();
+           
         });
     }
 
@@ -31,6 +28,11 @@ class CreateLjubimacsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ljubimacs');
+        Schema::table('veterinars', function (Blueprint $table) {
+           
+            $table->removeColumn('iskustvo');
+
+           
+        });
     }
 }
